@@ -1,12 +1,13 @@
 import MainLayout from 'src/layouts/MainLayout'
+import CardPostsCell from 'src/components/CardPostsCell'
+import { Row } from 'antd'
 
 const HomePage = () => {
   return (
     <MainLayout>
-      <div>
-        <h1>Home</h1>
-        <p> This will be used to display all the most recent posts. </p>
-      </div>
+      <Row gutter={8}>
+        <CardPostsCell></CardPostsCell>
+      </Row>
     </MainLayout>
   )
 }

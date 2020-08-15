@@ -9,7 +9,6 @@ export const QUERY = gql`
       title
       body
       createdAt
-      subredditId
     }
   }
 `
@@ -33,10 +32,7 @@ export const Success = ({ post }) => {
   })
 
   const onSave = (input, id) => {
-    const castInput = Object.assign(input, {
-      subredditId: parseInt(input.subredditId),
-    })
-    updatePost({ variables: { id, input: castInput } })
+    updatePost({ variables: { id, input } })
   }
 
   return (

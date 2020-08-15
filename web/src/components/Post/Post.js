@@ -70,10 +70,6 @@ const Post = ({ post }) => {
               <th>Created at</th>
               <td>{timeTag(post.createdAt)}</td>
             </tr>
-            <tr>
-              <th>Subreddit id</th>
-              <td>{post.subredditId}</td>
-            </tr>
           </tbody>
         </table>
       </div>

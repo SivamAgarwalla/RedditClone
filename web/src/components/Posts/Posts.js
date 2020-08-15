@@ -58,7 +58,6 @@ const PostsList = ({ posts }) => {
             <th>Title</th>
             <th>Body</th>
             <th>Created at</th>
-            <th>Subreddit id</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -69,7 +68,6 @@ const PostsList = ({ posts }) => {
               <td>{truncate(post.title)}</td>
               <td>{truncate(post.body)}</td>
               <td>{timeTag(post.createdAt)}</td>
-              <td>{truncate(post.subredditId)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link

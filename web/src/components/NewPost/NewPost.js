@@ -20,10 +20,7 @@ const NewPost = () => {
   })
 
   const onSave = (input) => {
-    const castInput = Object.assign(input, {
-      subredditId: parseInt(input.subredditId),
-    })
-    createPost({ variables: { input: castInput } })
+    createPost({ variables: { input } })
   }
 
   return (

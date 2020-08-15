@@ -28,8 +28,3 @@ export const deletePost = ({ id }) => {
     where: { id },
   })
 }
-
-export const Post = {
-  subreddit: (_obj, { root }) =>
-    db.post.findOne({ where: { id: root.id } }).subreddit(),
-}

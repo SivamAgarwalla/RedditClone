@@ -4,7 +4,6 @@ import {
   FieldError,
   Label,
   TextField,
-  NumberField,
   Submit,
 } from '@redwoodjs/forms'
 
@@ -54,22 +53,6 @@ const PostForm = (props) => {
           validation={{ required: true }}
         />
         <FieldError name="body" className="rw-field-error" />
-
-        <Label
-          name="subredditId"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Subreddit id
-        </Label>
-        <NumberField
-          name="subredditId"
-          defaultValue={props.post?.subredditId}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
-        />
-        <FieldError name="subredditId" className="rw-field-error" />
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
