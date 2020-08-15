@@ -13,6 +13,11 @@ const Routes = () => {
   return (
     <Router>
       <Route
+        path="/main-subreddit"
+        page={MainSubredditPage}
+        name="mainSubreddit"
+      />
+      <Route
         path="/subreddits/new"
         page={NewSubredditPage}
         name="newSubreddit"

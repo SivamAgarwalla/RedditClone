@@ -2,10 +2,8 @@ export const schema = gql`
   type Post {
     id: Int!
     title: String!
-    subreddit: Subreddit!
-    body: String!
+    body: String
     createdAt: DateTime!
-    subredditId: Int!
   }
 
   type Query {

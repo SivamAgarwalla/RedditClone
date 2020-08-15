@@ -1,0 +1,31 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "DeleteField",
+      "model": "Post",
+      "field": "subreddit"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Post",
+      "field": "subredditId"
+    },
+    {
+      "tag": "DeleteDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Post",
+          "field": "title"
+        },
+        "directive": "unique"
+      }
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Subreddit",
+      "field": "Post"
+    }
+  ]
+}

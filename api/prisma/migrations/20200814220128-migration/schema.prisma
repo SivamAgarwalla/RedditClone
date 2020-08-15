@@ -1,6 +1,6 @@
 datasource DS {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url = "***"
 }
 
 generator client {
@@ -13,15 +13,17 @@ generator client {
 // TODO: Please remove the following example:
 
 model Post {
-  id        Int      @id @default(autoincrement())
-  title     String
-  body      String
-  createdAt DateTime @default(now())
+  id          Int        @id @default(autoincrement())
+  title       String     @unique
+  subreddit   Subreddit? @relation(fields: [subredditId], references: [id])
+  body        String
+  createdAt   DateTime   @default(now())
+  subredditId Int?
 }
 
 model Subreddit {
   id        Int      @id @default(autoincrement())
   name      String
   createdAt DateTime @default(now())
-
+  Post      Post[]
 }

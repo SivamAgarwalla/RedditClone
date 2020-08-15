@@ -1,9 +1,13 @@
+import MainLayout from 'src/layouts/MainLayout'
+
 const HomePage = () => {
   return (
-    <div>
-      <h1>HomePage</h1>
-      <p> This will be used to display all the posts. </p>
-    </div>
+    <MainLayout>
+      <div>
+        <h1>Home</h1>
+        <p> This will be used to display all the most recent posts. </p>
+      </div>
+    </MainLayout>
   )
 }
 
