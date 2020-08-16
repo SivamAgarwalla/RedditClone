@@ -58,6 +58,7 @@ const PostsList = ({ posts }) => {
             <th>Title</th>
             <th>Body</th>
             <th>Created at</th>
+            <th>Image</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -68,6 +69,7 @@ const PostsList = ({ posts }) => {
               <td>{truncate(post.title)}</td>
               <td>{truncate(post.body)}</td>
               <td>{timeTag(post.createdAt)}</td>
+              <td>{truncate(post.image)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link

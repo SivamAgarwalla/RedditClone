@@ -2,8 +2,8 @@ export const schema = gql`
   type Subreddit {
     id: Int!
     name: String!
+    description: String
     createdAt: DateTime!
-    Post: [Post]!
   }
 
   type Query {
@@ -13,10 +13,12 @@ export const schema = gql`
 
   input CreateSubredditInput {
     name: String!
+    description: String
   }
 
   input UpdateSubredditInput {
     name: String
+    description: String
   }
 
   type Mutation {

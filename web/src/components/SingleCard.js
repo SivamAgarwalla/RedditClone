@@ -8,12 +8,13 @@ const SingleCard = ({ post }) => {
   return (
     <div>
       <Card
-        style={{ width: 300, padding: '5px 5px' }}
+        style={{ width: 400, padding: '10px 10px' }}
+        hoverable
         cover={
           <img
-            alt="black background"
+            alt="Random Generated Image"
             // Replace with image relevant to the post
-            src="https://i.ibb.co/crPQt2D/Screen-Shot-2020-08-15-at-12-03-56-AM.png"
+            src={post.image}
           />
         }
         actions={[
@@ -23,10 +24,7 @@ const SingleCard = ({ post }) => {
         ]}
       >
         <Meta
-          avatar={
-            // Replace with USER avatar png link
-            <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-          }
+          avatar={<Avatar src={'https://robohash.org/' + post.id} />}
           title={post.title}
           description={post.body}
         />

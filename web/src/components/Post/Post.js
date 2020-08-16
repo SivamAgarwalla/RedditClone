@@ -70,6 +70,10 @@ const Post = ({ post }) => {
               <th>Created at</th>
               <td>{timeTag(post.createdAt)}</td>
             </tr>
+            <tr>
+              <th>Image</th>
+              <td>{post.image}</td>
+            </tr>
           </tbody>
         </table>
       </div>

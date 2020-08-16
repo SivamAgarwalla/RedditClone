@@ -1,11 +1,12 @@
 import MainLayout from 'src/layouts/MainLayout'
+import AllSubredditsListCell from 'src/components/AllSubredditsListCell'
 
 const MainSubredditPage = () => {
   return (
     <MainLayout>
-      <div>
+      <div style={{ width: '100vh' }}>
         <h1>Subreddits</h1>
-        <p> This will be used to display all the subreddits </p>
+        <AllSubredditsListCell></AllSubredditsListCell>
       </div>
     </MainLayout>
   )
