@@ -4,7 +4,7 @@ import AllSubredditsListCell from 'src/components/AllSubredditsListCell'
 const MainSubredditPage = () => {
   return (
     <MainLayout>
-      <div style={{ width: '100vh' }}>
+      <div>
         <h1>Subreddits</h1>
         <AllSubredditsListCell></AllSubredditsListCell>
       </div>

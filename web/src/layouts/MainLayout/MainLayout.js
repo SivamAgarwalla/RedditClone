@@ -9,24 +9,23 @@ const MainLayout = ({ children }) => {
   return (
     <div>
       <Layout>
-        <Header style={{ background: '#ff4602' }} className="header">
+        <Header style={{ background: '#ff4602' }}>
           <h1 style={{ color: 'white' }} className="title">
             Reddit Clone
           </h1>
         </Header>
-        <Content style={{ padding: '10px 10px 10px 10px' }}>
-          <Layout
-            className="site-layout-background layout-overlay"
-            style={{ padding: '5px 5px' }}
-          >
+        <Content>
+          <Layout className="site-layout-background layout-overlay">
             <MainSideBar></MainSideBar>
             <div className="main-div-style">
               <Content>{children}</Content>
             </div>
           </Layout>
         </Content>
-        <Footer style={{ padding: '10px 10px 10px 10px' }}>
-          Reddit Clone Mintbean Hackathon
+        <Footer style={{ background: '#ff4602' }}>
+          <h1 style={{ color: 'white' }} className="title">
+            Created At Mintbeans 50th Hackathon
+          </h1>
         </Footer>
       </Layout>
     </div>

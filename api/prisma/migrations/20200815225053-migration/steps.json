@@ -1,0 +1,20 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "DeleteField",
+      "model": "Post",
+      "field": "Subreddit"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Post",
+      "field": "subredditId"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Subreddit",
+      "field": "allPosts"
+    }
+  ]
+}

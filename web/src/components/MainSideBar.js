@@ -8,7 +8,7 @@ const { Sider } = Layout
 const SideBar = () => {
   console.log('Getting here')
   return (
-    <Sider className="site-layout-background" width={200}>
+    <Sider className="site-layout-background" width={250}>
       <Menu mode="inline" style={{ height: '100%' }}>
         <Menu.Item key="main1">
           <Link to={routes.home()}> Home </Link>
@@ -17,10 +17,10 @@ const SideBar = () => {
           <Link to={routes.mainSubreddit()}> Subreddits </Link>
         </Menu.Item>
         <Menu.Item key="main3">
-          <Link to={routes.home()}> Create Post </Link>
+          <Link to={routes.userPostCreate()}> Create Post </Link>
         </Menu.Item>
         <Menu.Item key="main4">
-          <Link to={routes.home()}> Create Subreddit </Link>
+          <Link to={routes.userSubredditCreate()}> Create Subreddit </Link>
         </Menu.Item>
       </Menu>
     </Sider>

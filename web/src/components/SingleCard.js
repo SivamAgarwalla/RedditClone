@@ -8,15 +8,9 @@ const SingleCard = ({ post }) => {
   return (
     <div>
       <Card
-        style={{ width: 400, padding: '10px 10px' }}
+        style={{ width: 400, padding: '10px 10px 10px 10px' }}
         hoverable
-        cover={
-          <img
-            alt="Random Generated Image"
-            // Replace with image relevant to the post
-            src={post.image}
-          />
-        }
+        cover={<img alt="Random Generated Image" src={post.image} />}
         actions={[
           <UpOutlined key="upvote" />,
           <DownOutlined key="downvote" />,

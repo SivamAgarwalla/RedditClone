@@ -71,7 +71,7 @@ const PostForm = (props) => {
         <FieldError name="image" className="rw-field-error" />
 
         <div className="rw-button-group">
-          <Submit disabled={props.loading} className="rw-button rw-button-blue">
+          <Submit disabled={props.loading} className="rw-button rw-button-red">
             Save
           </Submit>
         </div>

@@ -23,7 +23,7 @@ export const Success = ({ subreddits }) => {
       dataSource={subreddits}
       renderItem={(subreddit) => (
         <div>
-          <List.Item style={{ width: '100vh' }}>
+          <List.Item style={{ width: '120vh' }}>
             <List.Item.Meta
               avatar={<Avatar src={'https://robohash.org/' + subreddit.name} />}
               title={subreddit.name}
