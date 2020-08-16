@@ -1,10 +1,10 @@
 import 'antd/dist/antd.css'
 import '../../index.css'
-import { Layout, Menu } from 'antd'
-import { Link, routes } from '@redwoodjs/router'
+import { Layout } from 'antd'
 
-const { SubMenu } = Menu
-const { Header, Content, Footer, Sider } = Layout
+import MainSideBar from 'src/components/MainSideBar'
+
+const { Header, Content, Footer } = Layout
 
 const MainLayout = ({ children }) => {
   // We have to make the header, sidebar, and footar using ANT
@@ -21,32 +21,7 @@ const MainLayout = ({ children }) => {
             className="site-layout-background layout-overlay"
             style={{ padding: '24px 0' }}
           >
-            <Sider className="site-layout-background" width={200}>
-              <Menu
-                mode="inline"
-                defaultOpenKeys={['sub2']}
-                style={{ height: '100%' }}
-              >
-                <Menu.Item key="1">
-                  <Link to={routes.home()}> Home </Link>
-                </Menu.Item>
-                <SubMenu key="sub2" title="Subreddit">
-                  <Menu.Item key="1">
-                    <Link to={routes.mainSubreddit()}> r/science </Link>
-                  </Menu.Item>
-                  <Menu.Item key="2">
-                    <Link to={routes.mainSubreddit()}> r/news </Link>
-                  </Menu.Item>
-                  <Menu.Item key="3">
-                    <Link to={routes.mainSubreddit()}> r/politics </Link>
-                  </Menu.Item>
-                  <Menu.Item key="4">
-                    <Link to={routes.mainSubreddit()}> r/AskReddit </Link>
-                  </Menu.Item>
-                </SubMenu>
-                <SubMenu key="sub3" title="Most Popular"></SubMenu>
-              </Menu>
-            </Sider>
+            <MainSideBar></MainSideBar>
             <div style={{ padding: '0px 10px' }}>
               <Content>{children}</Content>
             </div>

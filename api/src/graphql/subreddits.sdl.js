@@ -3,7 +3,6 @@ export const schema = gql`
     id: Int!
     name: String!
     createdAt: DateTime!
-    Post: [Post]!
   }
 
   type Query {
