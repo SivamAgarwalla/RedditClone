@@ -54,6 +54,22 @@ const PostForm = (props) => {
         />
         <FieldError name="body" className="rw-field-error" />
 
+        <Label
+          name="image"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Image
+        </Label>
+        <TextField
+          name="image"
+          defaultValue={props.post?.image}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+          validation={{ required: true }}
+        />
+        <FieldError name="image" className="rw-field-error" />
+
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
             Save

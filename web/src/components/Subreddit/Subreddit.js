@@ -63,6 +63,10 @@ const Subreddit = ({ subreddit }) => {
               <td>{subreddit.name}</td>
             </tr>
             <tr>
+              <th>Description</th>
+              <td>{subreddit.description}</td>
+            </tr>
+            <tr>
               <th>Created at</th>
               <td>{timeTag(subreddit.createdAt)}</td>
             </tr>

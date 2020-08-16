@@ -9,6 +9,7 @@
     "@redwoodjs/router": "^0.15.3",
     "@redwoodjs/web": "^0.15.3",
     "antd": "^4.5.4",
+    "circular-json": "^0.5.9",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

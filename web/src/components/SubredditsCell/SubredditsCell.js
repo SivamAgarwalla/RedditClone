@@ -7,6 +7,7 @@ export const QUERY = gql`
     subreddits {
       id
       name
+      description
       createdAt
     }
   }

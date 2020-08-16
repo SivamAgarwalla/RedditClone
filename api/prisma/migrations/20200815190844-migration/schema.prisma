@@ -1,6 +1,6 @@
 datasource DS {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url = "***"
 }
 
 generator client {
@@ -17,7 +17,6 @@ model Post {
   title     String
   body      String
   createdAt DateTime @default(now())
-  image     String?
 }
 
 model Subreddit {
