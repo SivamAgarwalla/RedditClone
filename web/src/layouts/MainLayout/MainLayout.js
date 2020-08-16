@@ -1,13 +1,16 @@
 import 'antd/dist/antd.css'
-import '../../index.css'
+import 'src/index.css'
 import { Layout, Menu } from 'antd'
 import { Link, routes } from '@redwoodjs/router'
+import NavSubredditsCell from 'src/components/NavSubredditsCell'
 
 const { SubMenu } = Menu
 const { Header, Content, Footer, Sider } = Layout
 
 const MainLayout = ({ children }) => {
   // We have to make the header, sidebar, and footar using ANT
+  const preparedNavSubredditsCell = () => <NavSubredditsCell />
+
   return (
     <div>
       <Layout>
@@ -43,6 +46,9 @@ const MainLayout = ({ children }) => {
                   <Menu.Item key="4">
                     <Link to={routes.mainSubreddit()}> r/AskReddit </Link>
                   </Menu.Item>
+                </SubMenu>
+                <SubMenu key="dynamic" title="DynamicSubreddit">
+                  { preparedNavSubredditsCell }
                 </SubMenu>
                 <SubMenu key="sub3" title="Most Popular"></SubMenu>
               </Menu>
