@@ -1,4 +1,3 @@
-//import 'antd/dist/antd.css'
 import '../../index.css'
 import { Layout } from 'antd'
 
@@ -7,7 +6,6 @@ import MainSideBar from 'src/components/MainSideBar'
 const { Header, Content, Footer } = Layout
 
 const MainLayout = ({ children }) => {
-  // We have to make the header, sidebar, and footar using ANT
   return (
     <div>
       <Layout>
@@ -16,18 +14,18 @@ const MainLayout = ({ children }) => {
             Reddit Clone
           </h1>
         </Header>
-        <Content style={{ padding: '0px 0px' }}>
+        <Content style={{ padding: '10px 10px 10px 10px' }}>
           <Layout
             className="site-layout-background layout-overlay"
-            style={{ padding: '24px 0' }}
+            style={{ padding: '5px 5px' }}
           >
             <MainSideBar></MainSideBar>
-            <div className="main-div-style" style={{ padding: '0px 10px' }}>
+            <div className="main-div-style">
               <Content>{children}</Content>
             </div>
           </Layout>
         </Content>
-        <Footer style={{ textAlign: 'center' }}>
+        <Footer style={{ padding: '10px 10px 10px 10px' }}>
           Reddit Clone Mintbean Hackathon
         </Footer>
       </Layout>

@@ -5,9 +5,12 @@ import { Row } from 'antd'
 const HomePage = () => {
   return (
     <MainLayout>
-      <Row gutter={[4, 4]}>
-        <CardPostsCell></CardPostsCell>
-      </Row>
+      <div>
+        <h1>Posts</h1>
+        <Row gutter={[4, 4]}>
+          <CardPostsCell></CardPostsCell>
+        </Row>
+      </div>
     </MainLayout>
   )
 }
