@@ -56,6 +56,7 @@ const SubredditsList = ({ subreddits }) => {
           <tr>
             <th>Id</th>
             <th>Name</th>
+            <th>Description</th>
             <th>Created at</th>
             <th>&nbsp;</th>
           </tr>
@@ -65,6 +66,7 @@ const SubredditsList = ({ subreddits }) => {
             <tr key={subreddit.id}>
               <td>{truncate(subreddit.id)}</td>
               <td>{truncate(subreddit.name)}</td>
+              <td>{truncate(subreddit.description)}</td>
               <td>{timeTag(subreddit.createdAt)}</td>
               <td>
                 <nav className="rw-table-actions">

@@ -5,7 +5,7 @@ import { Row } from 'antd'
 const HomePage = () => {
   return (
     <MainLayout>
-      <Row gutter={8}>
+      <Row gutter={[4, 4]}>
         <CardPostsCell></CardPostsCell>
       </Row>
     </MainLayout>

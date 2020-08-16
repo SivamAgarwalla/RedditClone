@@ -1,4 +1,4 @@
-import 'antd/dist/antd.css'
+//import 'antd/dist/antd.css'
 import '../../index.css'
 import { Layout } from 'antd'
 
@@ -16,13 +16,13 @@ const MainLayout = ({ children }) => {
             Reddit Clone
           </h1>
         </Header>
-        <Content style={{ padding: '0 10px' }}>
+        <Content style={{ padding: '0px 0px' }}>
           <Layout
             className="site-layout-background layout-overlay"
             style={{ padding: '24px 0' }}
           >
             <MainSideBar></MainSideBar>
-            <div style={{ padding: '0px 10px' }}>
+            <div className="main-div-style" style={{ padding: '0px 10px' }}>
               <Content>{children}</Content>
             </div>
           </Layout>

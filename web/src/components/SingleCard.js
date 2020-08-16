@@ -25,7 +25,7 @@ const SingleCard = ({ post }) => {
         <Meta
           avatar={
             // Replace with USER avatar png link
-            <Avatar src="https://avatars.dicebear.com/api/male/john.svg?mood[]=happy" />
+            <Avatar src={'https://robohash.org/' + post.id} />
           }
           title={post.title}
           description={post.body}

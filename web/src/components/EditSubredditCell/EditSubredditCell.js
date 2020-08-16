@@ -7,6 +7,7 @@ export const QUERY = gql`
     subreddit: subreddit(id: $id) {
       id
       name
+      description
       createdAt
     }
   }

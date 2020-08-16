@@ -19,3 +19,8 @@
   height: 100%;
   text-align: left;
 }
+
+.main-div-style {
+  display: flex;
+  overflow-y: scroll;
+}
