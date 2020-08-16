@@ -2,7 +2,7 @@ import 'antd/dist/antd.css'
 //import '../index/index.css'
 import { Layout, Menu } from 'antd'
 import { Link, routes } from '@redwoodjs/router'
-//import SubredditListCell from 'src/components/SubredditListCell'
+import SubredditListCell from 'src/components/SubredditListCell'
 
 const { SubMenu } = Menu
 const { Sider } = Layout
@@ -15,9 +15,7 @@ const SideBar = () => {
           <Link to={routes.home()}> Home </Link>
         </Menu.Item>
         <SubMenu key="main2" title="Subreddit">
-          <Menu.Item key="sr1">
-            <Link to={routes.mainSubreddit()}>AskReddit</Link>
-          </Menu.Item>
+          <SubredditListCell></SubredditListCell>
         </SubMenu>
         <Menu.Item key="main3">
           <Link to={routes.home()}> Most Popular </Link>

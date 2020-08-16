@@ -1,4 +1,6 @@
 import 'antd/dist/antd.css'
+import { Menu } from 'antd'
+
 import SingleSubredditItem from 'src/components/SingleSubredditItem'
 
 export const QUERY = gql`
@@ -17,20 +19,9 @@ export const Empty = () => <div>Empty</div>
 export const Failure = ({ error }) => <div>Error: {error.message}</div>
 
 export const Success = ({ subreddits }) => {
-  console.log('Reaching here')
   return subreddits.map((subreddit) => (
-    <SingleSubredditItem
-      key={subreddit.id}
-      subredditName={subreddit.name}
-    ></SingleSubredditItem>
+    <Menu.Item key={subreddit.id}>
+      <SingleSubredditItem subreddit={subreddit}></SingleSubredditItem>
+    </Menu.Item>
   ))
 }
-
-// export const Success = ({ subreddits }) => {
-//   return subreddits.map((subreddit) => (
-//     <div key={subreddit.id}>
-//       <Menu.Item>
-//         <Link to={routes.mainSubreddit()}> {subreddit.name} </Link>
-//       </Menu.Item>
-//     </div>
-//   )}
