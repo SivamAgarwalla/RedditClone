@@ -16,7 +16,7 @@ const NewSubreddit = () => {
     CREATE_SUBREDDIT_MUTATION,
     {
       onCompleted: () => {
-        navigate(routes.subreddits())
+        navigate(routes.mainSubreddit())
         addMessage('Subreddit created.', { classes: 'rw-flash-success' })
       },
     }

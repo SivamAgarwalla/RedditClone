@@ -14,7 +14,7 @@ const NewPost = () => {
   const { addMessage } = useFlash()
   const [createPost, { loading, error }] = useMutation(CREATE_POST_MUTATION, {
     onCompleted: () => {
-      navigate(routes.posts())
+      navigate(routes.home())
       addMessage('Post created.', { classes: 'rw-flash-success' })
     },
   })
